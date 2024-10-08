@@ -21,5 +21,5 @@ bash <(curl -s https://raw.githubusercontent.com/GuillotSamuel/Setup_script/mast
 ### With `wget`
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/GuillotSamuel/Setup_script/main/your_script.sh)
+bash <(wget -qO - https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master/installer.sh)
 ```
