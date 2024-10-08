@@ -16,3 +16,10 @@ You can run the script directly from GitHub using `curl`. Execute one of the fol
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master/installer.sh)
+```
+
+### With `wget`
+
+```bash
+bash <(wget -qO - https://raw.githubusercontent.com/GuillotSamuel/Setup_script/main/your_script.sh)
+```
