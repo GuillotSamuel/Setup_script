@@ -260,6 +260,7 @@ echo -e "${ORANGE}Installing gnome-browser-connector...${NC}"
 sudo apt-get install -y gnome-browser-connector
 check_status "Installation de gnome-browser-connector"
 
+# Installer Nautilus
 echo -e "${ORANGE}Installing Nautilus...${NC}"
 sudo apt install -y nautilus
 check_status "Installation de Nautilus"
