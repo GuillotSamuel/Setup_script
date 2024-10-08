@@ -1,8 +1,9 @@
 #!/bin/bash
 
-sudo apt install -y git
+GITHUB_BASE_URL="https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master"
+source <(wget -qO - ${GITHUB_BASE_URL}/includes/include.sh)
 
-source ./includes/include.sh
+sudo apt install -y git
 
 echo -e "\n${CYAN}Git configuration:${RESET}\n"
 

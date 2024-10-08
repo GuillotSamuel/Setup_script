@@ -9,7 +9,10 @@ WHITE='\033[0;37m'
 ORANGE='\033[0;38;5;208m'
 RESET='\033[0m'
 
-# Define folders
-INCLUDES='./includes'
-INSTALLATIONS='./installations'
-MODULES='./modules'
+# Define base URLs for GitHub repository
+GITHUB_BASE_URL="https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master"
+
+# Define folder URLs
+INCLUDES="${GITHUB_BASE_URL}/includes"
+INSTALLATIONS="${GITHUB_BASE_URL}/installations"
+MODULES="${GITHUB_BASE_URL}/modules"

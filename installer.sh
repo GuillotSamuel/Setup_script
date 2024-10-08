@@ -1,6 +1,9 @@
 #!/bin/bash
 
-source ./includes/include.sh
+sudo apt install -y wget
+
+GITHUB_BASE_URL="https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master"
+source <(wget -qO - ${GITHUB_BASE_URL}/includes/include.sh)
 
 print_border() {
     echo -e "\n${MAGENTA}======================================${RESET}"
@@ -29,19 +32,19 @@ echo ""
 
 case $choice in
     1)
-        source ${INSTALLATIONS}/1_manual.sh
+        source <(wget -qO - ${GITHUB_BASE_URL}/installations/1_manual.sh)
         ;;
     2)
-        source ${INSTALLATIONS}/2_default_dev.sh
+        source <(wget -qO - ${GITHUB_BASE_URL}/installations/2_default_dev.sh)
         ;;
     3)
-        source ${INSTALLATIONS}/3_default_dev_fr13.sh
+        source <(wget -qO - ${GITHUB_BASE_URL}/installations/3_default_dev_fr13.sh)
         ;;
     4)
-        source ${INSTALLATIONS}/4_inception.sh
+        source <(wget -qO - ${GITHUB_BASE_URL}/installations/4_inception.sh)
         ;;
     5)
-        source ${INSTALLATIONS}/5_camagru.sh
+        source <(wget -qO - ${GITHUB_BASE_URL}/installations/5_camagru.sh)
         ;;
     6)
         echo -e "${YELLOW}Exiting.${RESET}"
@@ -49,5 +52,6 @@ case $choice in
         ;;
     *)
         echo -e "${RED}Invalid choice. Please select a valid option.${RESET}"
+        exit 1
         ;;
 esac
