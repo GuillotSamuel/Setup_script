@@ -27,21 +27,15 @@ declare -A install_status
 for script in "${modules_to_install[@]}"; do
     script_path="${GITHUB_BASE_URL}/modules/$script"
 
-    echo "Script path: $script_path"
+    echo "Script path: $script_path" # DEBUG
 
-    if [ -x "$script_path" ]; then
-        echo -e "${GREEN}Running ${script}...${RESET}"
-        bash "$script_path"
-        status=$?
+    wget -qO - "$script_path" | bash
 
-        if [ $status -eq 0 ]; then
-            install_status["$script"]="${GREEN}Success${RESET}"
-        else
-            install_status["$script"]="${RED}Failed${RESET}"
-        fi
+    status=$?
+    if [ $status -eq 0 ]; then
+        install_status["$script"]="${GREEN}Success${RESET}"
     else
-        echo -e "${YELLOW}Skipping ${script}: not executable.${RESET}"
-        install_status["$script"]="${YELLOW}Skipped${RESET}"
+        install_status["$script"]="${RED}Failed${RESET}"
     fi
 done
 
