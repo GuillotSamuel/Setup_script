@@ -41,25 +41,16 @@ done
 
 echo -e "\n${CYAN}Configuration Summary:${RESET}"
 echo -e "${MAGENTA}=====================================${RESET}"
-printf "%-30s | %s\n" "Module" "Status"
+printf "%-20s | %s\n" "Module" "Status"
 echo -e "${MAGENTA}=====================================${RESET}"
 
 for script in "${modules_to_install[@]}"; do
     if [ "${install_status[$script]}" == "Success" ]; then
-        echo -e "%-30s | %s\n" "${script}" "${GREEN}${install_status[$script]}${RESET}"
+        echo -e "%-20s | %s\n" "${script}" "${GREEN}${install_status[$script]}${RESET}"
     else
-        echo -e "%-30s | %s\n" "${script}" "${RED}${install_status[$script]}${RESET}"
+        echo -e "%-20s | %s\n" "${script}" "${RED}${install_status[$script]}${RESET}"
     fi
 done
 
 echo -e "${MAGENTA}=====================================${RESET}"
 echo -e "${GREEN}Inception configuration completed!${RESET}"
-
-#!/bin/bash
-
-GREEN='\033[0;32m'
-RED='\033[0;31m'
-RESET='\033[0m'
-
-echo -e "${GREEN}Success${RESET}"
-echo -e "${RED}Failed${RESET}"
