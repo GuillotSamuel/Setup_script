@@ -5,7 +5,7 @@ source <(wget -qO - ${GITHUB_BASE_URL}/includes/include.sh)
 
 echo -e "${CYAN}Starting the default dev configuration...${RESET}"
 
-sudo apt update && sudo apt upgrade -y && sudo snap refresh
+sudo apt update && sudo apt upgrade -y
 
 modules_to_install=(
     "perso.sh"
@@ -45,6 +45,10 @@ modules_to_install=(
     "ssh_keygen.sh"
     "clean_installation.sh"
 )
+
+# OTHER CUSTOM COMMANDS
+sudo snap refresh
+# TO REMOVE FOR OTHER INSTALS
 
 declare -A install_status
 
