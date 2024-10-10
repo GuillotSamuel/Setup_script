@@ -25,9 +25,7 @@ modules_to_install=(
 declare -A install_status
 
 for script in "${modules_to_install[@]}"; do
-    script_path="$../{MODULES}/$script"
-
-    echo "$script_path"
+    script_path="../${MODULES}/$script"
 
     if [ -x "$script_path" ]; then
         echo -e "${GREEN}Running ${script}...${RESET}"
