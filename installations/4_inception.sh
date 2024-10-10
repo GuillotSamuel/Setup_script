@@ -33,9 +33,9 @@ for script in "${modules_to_install[@]}"; do
 
     status=$?
     if [ $status -eq 0 ]; then
-        install_status["$script"]="${GREEN}Success${RESET}"
+        install_status["$script"]="Success"
     else
-        install_status["$script"]="${RED}Failed${RESET}"
+        install_status["$script"]="Failed"
     fi
 done
 
@@ -45,7 +45,11 @@ printf "%-20s | %s\n" "Module" "Status"
 echo -e "${MAGENTA}=====================================${RESET}"
 
 for script in "${modules_to_install[@]}"; do
-    printf "%-20s | %s\n" "${script}" "${install_status[$script]}"
+    if [ "${install_status[$script]}" == "Success" ]; then
+        echo -e "%-20s | %s\n" "${script}" "${GREEN}${install_status[$script]}${RESET}"
+    else
+        echo -e "%-20s | %s\n" "${script}" "${RED}${install_status[$script]}${RESET}"
+    fi
 done
 
 echo -e "${MAGENTA}=====================================${RESET}"
