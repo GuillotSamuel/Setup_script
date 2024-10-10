@@ -25,7 +25,7 @@ modules_to_install=(
 declare -A install_status
 
 for script in "${modules_to_install[@]}"; do
-    script_path="/${MODULES}/$script"
+    script_path="${GITHUB_BASE_URL}/modules/$script"
 
     echo "Script path: $script_path"
 
