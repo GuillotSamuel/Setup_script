@@ -5,7 +5,7 @@ source <(wget -qO - ${GITHUB_BASE_URL}/includes/include.sh)
 
 echo -e "${CYAN}Starting the default dev configuration...${RESET}"
 
-sudo apt update && sudo apt upgrade -y
+# sudo apt update && sudo apt upgrade -y
 
 modules_to_install=(
     "mariadb.sh"
@@ -18,8 +18,8 @@ modules_to_install=(
 )
 
 # OTHER CUSTOM COMMANDS
-sudo usermod -aG sudo user
-echo "user ALL=(ALL:ALL) ALL" | sudo tee /etc/sudoers.d/user
+# sudo usermod -aG sudo user
+# echo "user ALL=(ALL:ALL) ALL" | sudo tee /etc/sudoers.d/user
 # TO REMOVE FOR OTHER INSTALS
 
 declare -A install_status
