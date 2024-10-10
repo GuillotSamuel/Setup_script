@@ -46,9 +46,9 @@ echo -e "${MAGENTA}=====================================${RESET}"
 
 for script in "${modules_to_install[@]}"; do
     if [ "${install_status[$script]}" == "Success" ]; then
-        output="${GREEN}${install_status[$script]}${RESET}"
+        output="${install_status[$script]}"
     else
-        output="${RED}${install_status[$script]}${RESET}"
+        output="${install_status[$script]}"
     fi
     printf "%-20s | %s\n" "${script}" ${output}
 done
