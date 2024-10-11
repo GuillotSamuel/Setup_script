@@ -31,6 +31,9 @@ declare -A install_status
 for script in "${modules_to_install[@]}"; do
     script_path="${GITHUB_BASE_URL}/modules/$script"
 
+    echo -e "\n${ORANGE}$script${RESET}"
+    echo -e "\n${ORANGE}------------------------${RESET}"
+
     wget -qO - "$script_path" | bash
 
     status=$?
