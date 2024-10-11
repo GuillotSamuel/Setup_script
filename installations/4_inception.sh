@@ -10,6 +10,7 @@ echo -e "${CYAN}Starting the Inception configuration...${RESET}"
 modules_to_install=(
     "docker.sh"
     "docker_compose.sh"
+    "zsh_ohmyzsh.sh"
     "tree.sh"
     "clean_installation.sh"
 )
