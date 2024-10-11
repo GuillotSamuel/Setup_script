@@ -19,5 +19,5 @@ You can run the script directly from GitHub using `wget`. Execute one of the fol
 ### With `wget`
 
 ```bash
-bash <(wget -qO - https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master/installer.sh)
+bash <(wget -qO - --no-cache https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master/installer.sh)
 ```
