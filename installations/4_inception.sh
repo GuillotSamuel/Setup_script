@@ -17,6 +17,12 @@ modules_to_install=(
 # OTHER CUSTOM COMMANDS
 # sudo usermod -aG sudo user
 # echo "user ALL=(ALL:ALL) ALL" | sudo tee /etc/sudoers.d/user
+USER_NAME="user"
+USER_PASSWORD="user"
+DB_NAME="my_database"
+DB_HOST="localhost"
+ROOT_USER="root"
+ROOT_PASSWORD="root_password"
 # TO REMOVE FOR OTHER INSTALS
 
 declare -A install_status

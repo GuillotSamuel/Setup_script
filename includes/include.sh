@@ -16,3 +16,4 @@ GITHUB_BASE_URL="https://raw.githubusercontent.com/GuillotSamuel/Setup_script/ma
 INCLUDES="${GITHUB_BASE_URL}/includes"
 INSTALLATIONS="${GITHUB_BASE_URL}/installations"
 MODULES="${GITHUB_BASE_URL}/modules"
+
