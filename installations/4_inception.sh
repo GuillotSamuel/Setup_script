@@ -3,7 +3,7 @@
 GITHUB_BASE_URL="https://raw.githubusercontent.com/GuillotSamuel/Setup_script/master"
 source <(wget -qO - ${GITHUB_BASE_URL}/includes/include.sh)
 
-echo -e "${CYAN}Starting the default dev configuration...${RESET}"
+echo -e "${CYAN}Starting the Inception configuration...${RESET}"
 
 # sudo apt update && sudo apt upgrade -y
 
@@ -17,12 +17,12 @@ modules_to_install=(
 # OTHER CUSTOM COMMANDS
 # sudo usermod -aG sudo user
 # echo "user ALL=(ALL:ALL) ALL" | sudo tee /etc/sudoers.d/user
-USER_NAME="user"
-USER_PASSWORD="user"
-DB_NAME="my_database"
-DB_HOST="localhost"
-ROOT_USER="root"
-ROOT_PASSWORD="root_password"
+# USER_NAME="user"
+# USER_PASSWORD="user"
+# DB_NAME="my_database"
+# DB_HOST="localhost"
+# ROOT_USER="root"
+# ROOT_PASSWORD="root_password"
 # TO REMOVE FOR OTHER INSTALS
 
 declare -A install_status
