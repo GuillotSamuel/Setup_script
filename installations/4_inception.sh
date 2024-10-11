@@ -41,7 +41,7 @@ for script in "${modules_to_install[@]}"; do
         install_status["$script"]="Failed"
     fi
 
-    echo -e "\n${ORANGE}------------------------${RESET}\n"
+    echo -e "\n${ORANGE}------------------------${RESET}"
 done
 
 echo -e "\n${CYAN}Configuration Summary:${RESET}"
