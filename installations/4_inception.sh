@@ -8,7 +8,6 @@ echo -e "${CYAN}Starting the Inception configuration...${RESET}"
 # sudo apt update && sudo apt upgrade -y
 
 modules_to_install=(
-    "curl_wget.sh"
     "docker.sh"
     "docker_compose.sh"
     "zsh_ohmyzsh.sh"
