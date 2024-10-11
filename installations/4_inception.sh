@@ -8,11 +8,8 @@ echo -e "${CYAN}Starting the default dev configuration...${RESET}"
 # sudo apt update && sudo apt upgrade -y
 
 modules_to_install=(
-    # "mariadb.sh"
-    # "nginx.sh"
     "docker.sh"
     "docker_compose.sh"
-    # "openssl.sh"
     "tree.sh"
     "clean_installation.sh"
 )
