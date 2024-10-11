@@ -4,4 +4,4 @@ source <(wget -qO - ${GITHUB_BASE_URL}/includes/include.sh)
 sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
-sudo usermod -aG docker ${USER_NAME}
+sudo usermod -aG docker user
