@@ -32,8 +32,6 @@ declare -A install_status
 for script in "${modules_to_install[@]}"; do
     script_path="${GITHUB_BASE_URL}/modules/$script"
 
-    echo "Script path: $script_path" # DEBUG
-
     wget -qO - "$script_path" | bash
 
     status=$?
@@ -42,6 +40,8 @@ for script in "${modules_to_install[@]}"; do
     else
         install_status["$script"]="Failed"
     fi
+
+    echo -e "\n${YELLOW}------------------------${YELLOW}\n"
 done
 
 echo -e "\n${CYAN}Configuration Summary:${RESET}"
