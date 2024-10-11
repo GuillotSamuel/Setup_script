@@ -7,3 +7,5 @@ sudo systemctl start docker
 for user in $(awk -F: '$3 >= 1000 && $3 < 65534 {print $1}' /etc/passwd); do
     sudo usermod -aG docker "$user"
 done
+sudo usermod -aG docker $USER
+sudo systemctl restart docker
